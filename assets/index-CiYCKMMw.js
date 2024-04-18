@@ -285,7 +285,7 @@ Error generating stack: `+o.message+`
     text-align: center;
     font-size: 15px;
     font-weight: 500;
-    margin: 5px;
+    margin: 7px;
     position: fixed;
 `,PO=ye(Lt.div)`
   position: fixed;
@@ -306,13 +306,12 @@ Error generating stack: `+o.message+`
   height: 400px;
 `,kO=ye.div`
     position: absolute;
-    top: 30px;
+    top: 33px;
     left: 30px;
     width: 30%;
     height: 285px;
     background-size: cover;
     background-position: center center;
-    border-radius: 5px;
 `,LO=ye.h3`
   color: ${e=>e.theme.white.lighter};
   padding: 25px;
