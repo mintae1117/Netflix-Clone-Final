@@ -257,13 +257,13 @@ Error generating stack: `+o.message+`
   opacity: 0;
 `,xO=ge.div`
     cursor: pointer;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     background-color: tomato;
     color: black;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     position: absolute;
     top: 10px;
@@ -294,14 +294,14 @@ Error generating stack: `+o.message+`
     background-position: center center;
 `,TO=ge.h3`
   color: ${e=>e.theme.white.lighter};
-  padding: 20px;
-  font-size: 46px;
+  padding: 25px;
+  font-size: 40px;
   position: relative;
-  top: -80px;
+  top: -90px;
 `,CO=ge.p`
-  padding: 20px;
+  padding: 25px;
   position: relative;
-  top: -80px;
+  top: -100px;
   margin-right: 10%;
   color: ${e=>e.theme.white.lighter};
 `,td={hidden:{x:window.outerWidth+5},visible:{x:0},exit:{x:-window.outerWidth-5}},nd={normal:{scale:1},hover:{scale:1.3,y:-20,transition:{delay:.5,duaration:.3,type:"tween"}}},rd={hover:{opacity:1,transition:{delay:.5,duaration:.1,type:"tween"}}},mn=6;function A0(){const e=cc(),t=wu("/Netflix-Clone-Final/movies/:category/:movieId"),{data:n,isLoading:r}=To(["movies","nowPlaying"],aO),{data:i,isLoading:o}=To(["movies","topRated"],lO),{data:s,isLoading:a}=To(["movies","upComing"],uO),[l,u]=A.useState(0),[c,f]=A.useState(0),[d,m]=A.useState(0),[v,g]=A.useState(!1),x=()=>{if(n){if(v)return;p();const w=n.results.length-1,L=Math.floor(w/mn)-1;u(V=>V===L?0:V+1)}},y=()=>{if(i){if(v)return;p();const w=i.results.length-1,L=Math.floor(w/mn)-1;f(V=>V===L?0:V+1)}},h=()=>{if(s){if(v)return;p();const w=s.results.length-1,L=Math.floor(w/mn)-1;m(V=>V===L?0:V+1)}},p=()=>g(w=>!w),_=(w,L)=>{e(`/Netflix-Clone-Final/movies/${L}/${w}`)},T=()=>e("/Netflix-Clone-Final/"),S=(t==null?void 0:t.params.movieId)&&((n==null?void 0:n.results.find(w=>w.id===+t.params.movieId))||(i==null?void 0:i.results.find(w=>w.id===+t.params.movieId))||(s==null?void 0:s.results.find(w=>w.id===+t.params.movieId)));return N.jsx(hO,{children:r&&o&&a?N.jsx(mO,{children:"Loading..."}):N.jsxs(pO,{children:[N.jsx(vO,{bgphoto:Mn((n==null?void 0:n.results[0].backdrop_path)||""),children:N.jsxs(yO,{children:[N.jsx(gO,{children:n==null?void 0:n.results[0].title}),N.jsx(SO,{children:n==null?void 0:n.results[0].overview})]})}),N.jsxs(Yf,{children:[N.jsx(Gf,{children:"Now playing movies"}),N.jsxs(Xf,{children:[N.jsx(qf,{onClick:x,children:"Next"}),N.jsx(Or,{initial:!1,onExitComplete:p,children:N.jsx(Zf,{variants:td,initial:"hidden",animate:"visible",exit:"exit",transition:{type:"tween",duration:1},children:n==null?void 0:n.results.slice(1).slice(mn*l,mn*l+mn).map(w=>N.jsx(Jf,{layoutId:w.id+"nowplaying",whileHover:"hover",initial:"normal",variants:nd,onClick:()=>_(w.id,"nowplaying"),transition:{type:"tween"},bgphoto:Mn(w.backdrop_path,"w500"),children:N.jsx(ed,{variants:rd,children:N.jsx("h4",{children:w.title})})},w.id))},l)})]})]}),N.jsxs(Yf,{children:[N.jsx(Gf,{children:"Top rated movies"}),N.jsxs(Xf,{children:[N.jsx(qf,{onClick:y,children:"Next"}),N.jsx(Or,{initial:!1,onExitComplete:p,children:N.jsx(Zf,{variants:td,initial:"hidden",animate:"visible",exit:"exit",transition:{type:"tween",duration:1},children:i==null?void 0:i.results.slice(1).slice(mn*c,mn*c+mn).map(w=>N.jsx(Jf,{layoutId:w.id+"toprated",whileHover:"hover",initial:"normal",variants:nd,onClick:()=>_(w.id,"toprated"),transition:{type:"tween"},bgphoto:Mn(w.backdrop_path,"w500"),children:N.jsx(ed,{variants:rd,children:N.jsx("h4",{children:w.title})})},w.id))},c)})]})]}),N.jsxs(Yf,{children:[N.jsx(Gf,{children:"Up comming movies"}),N.jsxs(Xf,{children:[N.jsx(qf,{onClick:h,children:"Next"}),N.jsx(Or,{initial:!1,onExitComplete:p,children:N.jsx(Zf,{variants:td,initial:"hidden",animate:"visible",exit:"exit",transition:{type:"tween",duration:1},children:s==null?void 0:s.results.slice(1).slice(mn*d,mn*d+mn).map(w=>N.jsx(Jf,{layoutId:w.id+"upcomming",whileHover:"hover",initial:"normal",variants:nd,onClick:()=>_(w.id,"upcomming"),transition:{type:"tween"},bgphoto:Mn(w.backdrop_path,"w500"),children:N.jsx(ed,{variants:rd,children:N.jsx("h4",{children:w.title})})},w.id))},d)})]})]}),N.jsx(Or,{children:t?N.jsxs(N.Fragment,{children:[N.jsx(wO,{onClick:T,exit:{opacity:0},animate:{opacity:1}}),N.jsxs(_O,{layoutId:t.params.movieId+String(t==null?void 0:t.params.category),children:[N.jsx(xO,{onClick:T,children:"x"}),S&&N.jsxs(N.Fragment,{children:[N.jsx(RO,{style:{backgroundImage:`linear-gradient(to top, black, transparent), url(${Mn(S.backdrop_path,"w500")})`}}),N.jsx(TO,{children:S.title}),N.jsx(CO,{children:S.overview}),N.jsx(EO,{style:{backgroundImage:`url(${Mn(S.poster_path,"w500")})`}})]})]})]}):null})]})})}function bO(){const e=Xo(),t=new URLSearchParams(e.search).get("keyword");return console.log(t),N.jsxs(N.Fragment,{children:[N.jsx("h1",{children:"Search"}),N.jsx("h2",{children:t})]})}const PO=ge.div`
