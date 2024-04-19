@@ -31,6 +31,10 @@ const router = createBrowserRouter([
         path: "/Netflix-Clone-Final/search",
         element: <Search />,
       },
+      {
+        path: "/Netflix-Clone-Final/search/:category/:id",
+        element: <Search />,
+      },
     ],
   },
 ]);// router setting, 라우터를 layout + outlet으로 render하고 새로운 route로 이동하기 위한 세팅
