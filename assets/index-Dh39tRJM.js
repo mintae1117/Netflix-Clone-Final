@@ -298,8 +298,7 @@ Error generating stack: `+o.message+`
   width: 40vw;
   height: 80vh;
   border-radius: 15px;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden;
   background-color: ${e=>e.theme.black.lighter};
 `,AO=ye.div`
   width: 100%;
