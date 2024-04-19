@@ -283,10 +283,13 @@ Error generating stack: `+o.message+`
     background-color: tomato;
     color: black;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     font-size: 15px;
     font-weight: 500;
     margin: 7px;
     position: fixed;
+    display: flex;
 `,PO=ye(Lt.div)`
   position: fixed;
   top: 10%;
