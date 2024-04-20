@@ -14,9 +14,9 @@
 ## 💻 사용 기술.
 
 - `React.js`, `Typescript`, `Javascript`
-- `React-Router-Dom`, `React-hook-form`, `framer-motion`, `Recoil`, `Styled-components`
-- `React-query`, `framer-motion`, `Styled-components`, `react-type-animation`, `Vite`, `themoviedb`
-- Deploy : `gh-pages`
+- `React-Router-Dom`, `React-hook-form`, `React-query`, `Recoil`, `Styled-components`
+- `framer-motion`, `react-type-animation`, `Vite`, `Themoviedb`
+- Deploy : `Github-gh-pages`
 - Later Edit Deploy : `Vercel`
 
 <br>
