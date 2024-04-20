@@ -26,7 +26,7 @@
 <p>2. 헤더(navbar or header) : 헤더는 간단한 framer-motion을 이용한 animation을 보여주는 netflix 로고와 framer-motion을 이용한 router위치를 알려주는 animation menu를 만들었습니다. 그리고 클릭에 반응하여 펼쳐지고 접히는 search-bar 도 만들었고 검색을 하게되면 keyword 검색결과에 해당하는 /search 페이지로 이동하게 됩니다.</p>
 <p>3. 홈(movie) 페이지 : 홈페이지는 movie들을 보여주는 페이지 입니다. 모두 now playing, top rated, up comming 카테고리에 해당하는 영화들을 배너와 슬라이더로 보여주고 다양한 framer-motion을 이용한 animation도 들어가 있습니다. 영화 slider 또는 banner 를 누르면 각 영화의 상세 페이지를 modal 형태로 보여주며 다양한 상세 정보들을 보여줍니다.</p>
 <p>4. 티비(tv shows) 페이지 : 티비 페이지는 홈(movie) 페이지와 별반 다르지 않습니다. 다만 홈페이지에 있던 영화들이 tv show로 바뀌었습니다. 각각 popular, toprated, airing today의 카테고리에 해당하는 티비쇼 정보들을 보여줍니다. react-query를 이용하여 themoviedb-api를 공부할 수 있었던 좋은 경험 이었습니다.</p>
-<p>5. 검색결과(search) 페이지 : 검색결과 페이지 에서는 일단 검색한 keyword를 react-type-animation을 이용해 이쁘게 보여줍니다. 그리고 아래에는 각각 검색 결과에 해당하는 movie, tv shows 들을 slider로 보여줍니다. 각 slider 들은 검색된 결과 양에 해당하는 만큼의 index page를 갖게되며 그만큼만 페이지를 넘길 수 있고 다넘기게 되면 처음으로 돌아옵니다. 이 slider 또한 framer-motion을 사용하여 animation을 넣었습니다.</p>
+<p>5. 검색결과(search) 페이지 : 검색결과 페이지 에서는 일단 검색한 keyword를 react-type-animation을 이용해 이쁘게 보여줍니다. 그리고 아래에는 각각 검색 결과에 해당하는 movie, tv shows 들을 slider로 보여줍니다. 각 slider 들은 검색된 결과 양에 해당하는 만큼의 index page를 갖게되며 그만큼만 페이지를 넘길 수 있고 다넘기게 되면 처음으로 돌아옵니다. 이 slider 또한 framer-motion을 사용하여 animation을 넣었습니다. 그리고 마지막으로 검색 결과가 있다면 검색결과의 수를 title 옆에 보여주도록 하였습니다.</p>
 <p>6. Footer and etc : 간단한 footer를 만들었습니다. 제 이름을 클릭하게 되면 제 github-repository로 이동합니다. utils.ts에서 검색되지 않는 img들에 대한 path는 저장된 "없는 이미지입니다".png로 대체됩니다. 그리고 그외에 movie-api, vite, 여러가지 react-hook들을 경험하며 재밌는 기능들을 많이 사용해 봤던 프로젝트인 것 같습니다.</p>
 
 ## 2024 / 04 / 15 겪은 어려움과 해결방법.

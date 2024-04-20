@@ -57,7 +57,7 @@ const Loader = styled.div`
 `;
 
 const SlideTitle = styled.h3`
-    font-size: 25px;
+    font-size: 27px;
     padding: 10px;
 `;
 
@@ -344,10 +344,10 @@ function Search() {
                     /> : "No keyword."}
                 </SearchTitleDiv>
                 <SliderDiv>
-                    <SlideTitle>Searched Movies</SlideTitle>
+                    <SlideTitle>Searched Movies<span style={{fontSize: "17px"}}>{movieSearch?.results.length !== 0 ? ` / Found ${movieSearch?.results.length} results.` : " / No results found."}</span></SlideTitle>
                     <Slider>
                         <SlideBtn onClick={increaseIndex1}>Next</SlideBtn>
-                        <Page>{index1 + 1} / {movieSearch ? Math.floor(movieSearch?.results.length / offset) + 1 : "No results"}</Page>
+                        <Page>{index1 + 1} / {movieSearch ? Math.floor(movieSearch?.results.length / offset) + 1 : 1}</Page>
                         <AnimatePresence initial={false} onExitComplete={toggleLeaving}>
                             <Row
                             variants={rowVariants}
@@ -382,10 +382,10 @@ function Search() {
                 </SliderDiv>
 
                 <SliderDivLast>
-                    <SlideTitle>Searched Tv shows</SlideTitle>
+                    <SlideTitle>Searched Tv shows<span style={{fontSize: "17px"}}>{tvSearch?.results.length !== 0 ? ` / Found ${tvSearch?.results.length} results.` : " / No results found."}</span></SlideTitle>
                     <Slider>
                         <SlideBtn onClick={increaseIndex2}>Next</SlideBtn>
-                        <Page>{index2 + 1} / {tvSearch ? Math.floor(tvSearch?.results.length / offset) + 1 : "No results"}</Page>
+                        <Page>{index2 + 1} / {tvSearch ? Math.floor(tvSearch?.results.length / offset) + 1 : 1}</Page>
                         <AnimatePresence initial={false} onExitComplete={toggleLeaving}>
                             <Row
                             variants={rowVariants}
