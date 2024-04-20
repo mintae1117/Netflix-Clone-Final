@@ -334,7 +334,7 @@ function Search() {
                     { keyword === nowkeyword ? <TypeAnimation
                         preRenderFirstString={true}
                         sequence={[
-                            'Search', // initially rendered starting point.
+                            'Search results', // initially rendered starting point.
                             10,
                             `Search results about "${nowkeyword}".`,
                             1000
