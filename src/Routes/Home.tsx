@@ -11,6 +11,7 @@ import { makeImagePath } from "../utils";
 import { useState } from "react";
 import { PathMatch, useMatch, useNavigate } from "react-router-dom"
 import MovieInfo from "../Components/MovieInfo";
+import { TypeAnimation } from "react-type-animation";
 
 const Wrapper = styled.div`
   background: black;
@@ -79,6 +80,8 @@ const BannerDiv = styled(motion.div)`
     border-radius: 30px;
     width: auto;
     max-width: 700px;
+    min-width: 700px;
+    min-height: 200px;
     background-color: rgba( 0, 0, 0, 0.5 );
     display: flex;
     flex-direction: column;
@@ -89,15 +92,16 @@ const BannerDiv = styled(motion.div)`
     }
 `;
 
-const Title = styled.h3`
+/*const Title = styled.h3`
   font-size: 50px;
   margin-bottom: 20px;
-`;
+`;*/
 
-const Overview = styled.p`
+/*const Overview = styled.p`
   font-size: 25px;
   width: 90%;
-`;
+  margin-top: 10px;
+`;*/
 
 const SliderDiv = styled.div`
     position: relative;
@@ -348,8 +352,25 @@ function Home() {
                         onClick={() => onBoxClicked(Number(nowPlaying?.results[0].id), "nowplaying")}
                         layoutId={String(nowPlaying?.results[0].id) + "nowplaying"}
                     >
-                        <Title>{nowPlaying?.results[0].title}</Title>
-                        <Overview>{nowPlaying?.results[0].overview}</Overview>
+                        <TypeAnimation
+                        cursor= {false}
+                        sequence={[
+                            `${nowPlaying?.results[0].title}.`,
+                            1000
+                        ]}
+                        speed={30}
+                        style={{ fontSize: '3.3em' }}
+                        />
+                        <TypeAnimation
+                        sequence={[
+                            2000,
+                            `${nowPlaying?.results[0].overview}`,
+                            1000
+                        ]}
+                        speed={50}
+                        style={{ fontSize: '1.7em' }}
+                        />
+                        
                     </BannerDiv>
                 </Banner>
                 <SliderDiv>
