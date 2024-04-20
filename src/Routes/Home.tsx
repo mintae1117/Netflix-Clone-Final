@@ -84,6 +84,7 @@ const BannerDiv = styled(motion.div)`
     min-height: 200px;
     background-color: rgba( 0, 0, 0, 0.5 );
     display: flex;
+    gap: 20px;
     flex-direction: column;
     &:hover{
         background-color: rgba( 0, 0, 0, 0.77 );
