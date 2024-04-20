@@ -29,7 +29,7 @@
 <p>5. 검색결과(search) 페이지 : 검색결과 페이지 에서는 일단 검색한 keyword를 react-type-animation을 이용해 이쁘게 보여줍니다. 그리고 아래에는 각각 검색 결과에 해당하는 movie, tv shows 들을 slider로 보여줍니다. 각 slider 들은 검색된 결과 양에 해당하는 만큼의 index page를 갖게되며 그만큼만 페이지를 넘길 수 있고 다넘기게 되면 처음으로 돌아옵니다. 이 slider 또한 framer-motion을 사용하여 animation을 넣었습니다. 그리고 마지막으로 검색 결과가 있다면 검색결과의 수를 title 옆에 보여주도록 하였습니다.</p>
 <p>6. Footer and etc : 간단한 footer를 만들었습니다. 제 이름을 클릭하게 되면 제 github-repository로 이동합니다. utils.ts에서 검색되지 않는 img들에 대한 path는 저장된 "없는 이미지입니다".png로 대체됩니다. 그리고 그외에 movie-api, vite, 여러가지 react-hook들을 경험하며 재밌는 기능들을 많이 사용해 봤던 프로젝트인 것 같습니다.</p>
 
-## 2024 / 04 / 15 겪은 어려움과 해결방법.
+## 2024 / 04 / 16 겪은 어려움과 해결방법.
 <p>vite project 를 gh-pages로 배포할때 주의점!
 <p>1. 원래 배포와는 다르다. "deploy": "gh-pages -d dist" 처럼 실행 시킬때 쓰는 명령어에 차이가 있다.
 <p>2. vite.config.ts에 base 설정을 해줘야한다. 그렇지 않으면 깃헙에서 배포할때 파일을 읽지 못한다.
@@ -48,7 +48,7 @@
 <p>새로운 프로젝트 양식을 제출하고 api key를 새로 받아서 코딩을 하였더니 정상적으로 api가 호출 되었다.
 check
 
-## 2024 / 04 / 21 겪은 어려움과 해결방법.
+## 2024 / 04 / 20 겪은 어려움과 해결방법.
 <p>gh-pages로 즉 github로 배포를 하게되면 hashrouter를 쓰지 않는 이상 404 페이지가 뜨도록 돼있다.
 <p>이것은 추후에 배포 수단을 깃헙이 아닌 다른것으로 바꾸면 되기 때문에 크게 신경쓰지 않아도 될듯 하다.
 <p>그리고 search 에서 movie 와 tv 결과들을 보여줄때 서로 다른 animatepresence를 써주는것이 좋다.
