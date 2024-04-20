@@ -136,6 +136,7 @@ Error generating stack: `+o.message+`
     height: 25px;
   }
 `,uV=ee(it.input)`
+  outline: none;
   transform-origin: right center;
   position: absolute;
   left: -195px;
