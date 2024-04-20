@@ -267,14 +267,14 @@ function Search() {
         data: movieSearch,
         isLoading: movieSearchLoading,
         refetch: movieRefetch,
-    } = useQuery<IGetMoviesResult>(["movies", "nowPlaying"], () =>
+    } = useQuery<IGetMoviesResult>(["searchmovies", "nowPlaying"], () =>
         getSearchMovies(String(keyword))
     );
     const {
         data: tvSearch,
         isLoading: tvSearchLoading,
         refetch: tvRefetch,
-    } = useQuery<IGetTvResult>(["tves", "nowPlaying"], () =>
+    } = useQuery<IGetTvResult>(["searchtves", "nowPlaying"], () =>
         getSearchTves(String(keyword))
     );
 
