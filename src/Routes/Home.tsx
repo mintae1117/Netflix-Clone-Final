@@ -81,7 +81,7 @@ const BannerDiv = styled(motion.div)`
     width: auto;
     max-width: 700px;
     min-width: 700px;
-    min-height: 200px;
+    min-height: 320px;
     background-color: rgba( 0, 0, 0, 0.5 );
     display: flex;
     gap: 20px;
@@ -364,7 +364,7 @@ function Home() {
                         />
                         <TypeAnimation
                         sequence={[
-                            2000,
+                            1300,
                             `${nowPlaying?.results[0].overview}`,
                             1000
                         ]}
