@@ -359,7 +359,7 @@ function Home() {
                             `${nowPlaying?.results[0].title}.`,
                             1000
                         ]}
-                        speed={30}
+                        speed={50}
                         style={{ fontSize: '3.3em' }}
                         />
                         <TypeAnimation
@@ -368,7 +368,7 @@ function Home() {
                             `${nowPlaying?.results[0].overview}`,
                             1000
                         ]}
-                        speed={50}
+                        speed={70}
                         style={{ fontSize: '1.7em' }}
                         />
                         
