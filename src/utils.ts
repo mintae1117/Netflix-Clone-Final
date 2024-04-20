@@ -1,4 +1,4 @@
-import noImg from "../public/image-not-found-scaled-1150x647.png"
+import noImg from "../public/NoImageLarge.png"
 
 export function makeImagePath(id: string, format?: string) {
     if(id === undefined || id === null){
