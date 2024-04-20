@@ -1,4 +1,31 @@
-# link : [바로가기](https://mintae1117.github.io/Netflix-Clone-Final/)
+# Netflix Clone Coding <br> Link : [바로가기](https://mintae1117.github.io/Netflix-Clone-Final/)
+
+<h3>Netflix clone coding challenge in nomadcoder.<br>
+리액트 마스터 클래스 챌린지 결과물 입니다.</h3>
+
+<br>
+
+## 📷 각 페이지별 화면 사진.
+![](https://velog.velcdn.com/images/mintae1117/post/a830f6b2-56e6-43b0-8b8d-d0bb1c9d1e12/image.png)
+![](https://velog.velcdn.com/images/mintae1117/post/301f30a8-7f6c-4f14-a62b-7e958448f207/image.png)
+![](https://velog.velcdn.com/images/mintae1117/post/dc5048d9-34f5-4f8d-aaf9-d1e24ea39a2d/image.png)
+![](https://velog.velcdn.com/images/mintae1117/post/3349b6f5-e341-456c-a7d0-ef8620612ea8/image.png)
+
+<br>
+
+## 💻 사용 기술.
+
+- `React.js`, `Typescript`, `Javascript`
+- `React-Router-Dom`, `React-hook-form`, `framer-motion`, `Recoil`, `Styled-components`
+- `React-query`, `framer-motion`, `Styled-components`, `Vite`, `themoviedb`
+- Deploy : `gh-pages`
+
+<br>
+
+## 😄 사용 가능한 기능, 디자인 설명.
+<p>1. aaa</p>
+<p>2. bbb</p>
+
 
 ## 0417 겪은 어려움과 해결방법.
 <p>vite project 를 gh-pages로 배포할때 주의점!
@@ -18,3 +45,10 @@
 <p>이제 특정 양식을 제출해야만 api key 를 받을수가 있다. 그리고 api키가 예전에 만들었던 것이라면 api가 정상적으로 호출이 안된다.
 <p>새로운 프로젝트 양식을 제출하고 api key를 새로 받아서 코딩을 하였더니 정상적으로 api가 호출 되었다.
 check
+
+## 0420 겪은 어려움과 해결방법.
+<p>gh-pages로 즉 github로 배포를 하게되면 hashrouter를 쓰지 않는 이상 404 페이지가 뜨도록 돼있다.
+<p>이것은 추후에 배포 수단을 깃헙이 아닌 다른것으로 바꾸면 되기 때문에 크게 신경쓰지 않아도 될듯 하다.
+<p>그리고 search 에서 movie 와 tv 결과들을 보여줄때 서로 다른 animatepresence를 써주는것이 좋다.
+<p>괜히 같이 써보려다가 error만 더 나게된다.
+<p>마지막으로 router에 관련된 값들을 정확하게 맞춰줘야 api를 불러올때도 error가 안난다. 조심하자.
