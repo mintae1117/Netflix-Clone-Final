@@ -320,7 +320,7 @@ function Search() {
     };
 
     const onOverlayClick = () => navigate(`/Netflix-Clone-Final/search?keyword=${keyword}`);
-    
+
     const clickedMovie = bigMovieMatch?.params.movieId && (movieSearch?.results.find((movie) => movie.id === +bigMovieMatch.params.movieId!));
     const clickedTv = bigTvMatch?.params.movieId && (tvSearch?.results.find((movie) => movie.id === +bigTvMatch.params.movieId!));
 
@@ -336,11 +336,11 @@ function Search() {
                         sequence={[
                             'Search', // initially rendered starting point.
                             10,
-                            `Search results of  "${nowkeyword}"`,
+                            `Search results about "${nowkeyword}".`,
                             1000
                         ]}
                         speed={30}
-                        style={{ fontSize: '4em' }}
+                        style={{ fontSize: '3.5em' }}
                     /> : "No keyword."}
                 </SearchTitleDiv>
                 <SliderDiv>
