@@ -24,7 +24,7 @@ const GlobalStyles = createGlobalStyle`
     text-decoration:none;
     color:inherit;
   }
-`;
+`;// styled-reset
 
 const client = new QueryClient();
 

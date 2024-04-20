@@ -41,13 +41,12 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);// router setting, 라우터를 layout + outlet으로 render하고 새로운 route로 이동하기 위한 세팅
-
+]);// router setting, 라우터를 layout + outlet으로 하고 새로운 route로 이동하기 위한 세팅
 
 function App() {
   return (
     <RouterProvider router={router}></RouterProvider>
   );
-}
+}// 걍 일부로 hashrouter 안썼음.
 
 export default App

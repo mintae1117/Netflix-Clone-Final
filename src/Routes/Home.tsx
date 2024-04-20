@@ -332,7 +332,7 @@ function Home() {
 
     const onOverlayClick = () => navigate("/Netflix-Clone-Final/");
     const clickedMovie = bigMovieMatch?.params.movieId && (nowPlaying?.results.find((movie) => movie.id === +bigMovieMatch.params.movieId!) || topRated?.results.find((movie) => movie.id === +bigMovieMatch.params.movieId!) || upComing?.results.find((movie) => movie.id === +bigMovieMatch.params.movieId!));
-    //수정 필요
+    //수정 필요 / 완료.
 
     return (
     <Wrapper>

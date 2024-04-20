@@ -65,7 +65,7 @@ export interface IGetDetailMovieResult {
   spoken_languages: IspokenLanguages[];
   tagline: string;
   vote_average: number;
-}// API로 가져온 영화 상세 정보 형식 지정
+}// 영화 상세정보
 
 export interface IGetDetailTvResult {
   id: number;
@@ -80,12 +80,11 @@ export interface IGetDetailTvResult {
   number_of_episodes: number;
   spoken_languages: IspokenLanguages[];
   vote_average: number;
-}// API로 가져온 Tv Show 상세 정보 형식 지정
+}// 티비쇼 상세정보
 
 export function getMovies() {
   return fetch(`${BASE_PATH}/movie/now_playing?api_key=${API_KEY}`).then(
-    (response) => response.json()
-  );
+    (response) => response.json());
 }
 export function getTopRatedMovies() {
   return fetch(

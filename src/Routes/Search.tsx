@@ -320,6 +320,7 @@ function Search() {
     };
 
     const onOverlayClick = () => navigate(`/Netflix-Clone-Final/search?keyword=${keyword}`);
+    
     const clickedMovie = bigMovieMatch?.params.movieId && (movieSearch?.results.find((movie) => movie.id === +bigMovieMatch.params.movieId!));
     const clickedTv = bigTvMatch?.params.movieId && (tvSearch?.results.find((movie) => movie.id === +bigTvMatch.params.movieId!));
 
