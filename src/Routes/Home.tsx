@@ -121,7 +121,7 @@ const Row = styled(motion.div)`
 `;
 
 const Box = styled(motion.div)<{ bgphoto: string }>`
-  background-color: transparent;
+  background-color: #464646;
   background-image: url(${(props) => props.bgphoto});
   background-size: cover;
   background-position: center center;

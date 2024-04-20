@@ -39,6 +39,20 @@ const ColumWrapper = styled.div`
     flex-direction: column;
 `;
 
+const SearchTitleDiv = styled.div`
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #606060;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+`;
+
+const SearchTitle = styled.h2`
+    font-size: 50px;
+    font-weight: 600;
+`;
+
 const Loader = styled.div`
   height: 20vh;
   display: flex;
@@ -78,13 +92,12 @@ const Page = styled.h4`
 
 const SliderDiv = styled.div`
     position: relative;
-    margin-bottom: 220px;
-    margin-top: 200px;
+    margin-bottom: 430px;
 `;
 
 const SliderDivLast = styled.div`
     position: relative;
-    margin-bottom: 120px;
+    margin-bottom: 350px;
 `;
 
 const Slider = styled.div`
@@ -100,11 +113,11 @@ const Row = styled(motion.div)`
 `;
 
 const Box = styled(motion.div)<{ bgphoto: string }>`
-  background-color: transparent;
+  background-color: #464646;
   background-image: url(${(props) => props.bgphoto});
   background-size: cover;
   background-position: center center;
-  height: 200px;
+  height: 400px;
   font-size: 66px;
   border-radius: 5px;
   &:first-child {
@@ -268,23 +281,23 @@ function Search() {
         getSearchTves(String(keyword))
     );
 
+    const [index1, setIndex1] = useState(0);
+    const [index2, setIndex2] = useState(0);
+    const [leaving, setLeaving] = useState(false);
+
     useEffect(() => {
         movieRefetch();
         tvRefetch();
+        setLeaving(false);
     }, [keyword, movieRefetch, tvRefetch]);
-
-    const [index1, setIndex1] = useState(0);
-    const [index2, setIndex2] = useState(0);
-
-    const [leaving, setLeaving] = useState(false);
 
     const increaseIndex1 = () => {
         if (movieSearch) {
           if (leaving) return;
           toggleLeaving();
-          const totalMovies = movieSearch.results.length - 1;
+          const totalMovies = movieSearch.results.length;
           const maxIndex = Math.floor(totalMovies / offset);
-          setIndex1((prev) => (prev === maxIndex ? 0 : prev + 1));
+          setIndex1((prev) => (prev >= maxIndex ? 0 : prev + 1));
         }
     };// slide 1 increase
 
@@ -292,9 +305,9 @@ function Search() {
         if (tvSearch) {
           if (leaving) return;
           toggleLeaving();
-          const totalMovies = tvSearch.results.length - 1;
+          const totalMovies = tvSearch.results.length;
           const maxIndex = Math.floor(totalMovies / offset);
-          setIndex2((prev) => (prev === maxIndex ? 0 : prev + 1));
+          setIndex2((prev) => (prev >= maxIndex ? 0 : prev + 1));
         }
     };// slide 2 increase
 
@@ -318,12 +331,14 @@ function Search() {
         <Loader>Loading...</Loader>
         ) : (
             <ColumWrapper>
-                <h2>"{keyword}" 검색결과</h2>
+                <SearchTitleDiv>
+                    <SearchTitle>Search results of "{keyword}"</SearchTitle>
+                </SearchTitleDiv>
                 <SliderDiv>
-                    <SlideTitle>Movies</SlideTitle>
+                    <SlideTitle>Searched Movies</SlideTitle>
                     <Slider>
                         <SlideBtn onClick={increaseIndex1}>Next</SlideBtn>
-                        <Page>{index1 + 1} / 3</Page>
+                        <Page>{index1 + 1} / {movieSearch ? Math.floor(movieSearch?.results.length / offset) + 1 : "No results"}</Page>
                         <AnimatePresence initial={false} onExitComplete={toggleLeaving}>
                             <Row
                             variants={rowVariants}
@@ -345,7 +360,7 @@ function Search() {
                                 variants={boxVariants}
                                 onClick={() => onMovieClicked(movie.id)}
                                 transition={{ type: "tween" }}
-                                bgphoto={makeImagePath(movie.backdrop_path, "w500")}
+                                bgphoto={makeImagePath(movie.poster_path, "w500")}
                                 >
                                     <Info variants={infoVariants}>
                                     <h4>{movie.title}</h4>
@@ -358,10 +373,10 @@ function Search() {
                 </SliderDiv>
 
                 <SliderDivLast>
-                    <SlideTitle>Tv shows</SlideTitle>
+                    <SlideTitle>Searched Tv shows</SlideTitle>
                     <Slider>
                         <SlideBtn onClick={increaseIndex2}>Next</SlideBtn>
-                        <Page>{index2 + 1} / 3</Page>
+                        <Page>{index2 + 1} / {tvSearch ? Math.floor(tvSearch?.results.length / offset) + 1 : "No results"}</Page>
                         <AnimatePresence initial={false} onExitComplete={toggleLeaving}>
                             <Row
                             variants={rowVariants}
@@ -383,7 +398,7 @@ function Search() {
                                 variants={boxVariants}
                                 onClick={() => onTvClicked(movie.id)}
                                 transition={{ type: "tween" }}
-                                bgphoto={makeImagePath(movie.backdrop_path, "w500")}
+                                bgphoto={makeImagePath(movie.poster_path, "w500")}
                                 >
                                     <Info variants={infoVariants}>
                                     <h4>{movie.name}</h4>
