@@ -352,7 +352,7 @@ function Home() {
                     </BannerDiv>
                 </Banner>
                 <SliderDiv>
-                    <SlideTitle>Now playing movies</SlideTitle>
+                    <SlideTitle>Now playing Movies</SlideTitle>
                     <Slider>
                         <SlideBtn onClick={increaseIndex1}>Next</SlideBtn>
                         <Page>{index1 + 1} / 3</Page>
@@ -390,7 +390,7 @@ function Home() {
                 </SliderDiv>
 
                 <SliderDiv>
-                    <SlideTitle>Top rated movies</SlideTitle>
+                    <SlideTitle>Top rated Movies</SlideTitle>
                     <Slider>
                         <SlideBtn onClick={increaseIndex2}>Next</SlideBtn>
                         <Page>{index2 + 1} / 3</Page>
@@ -428,7 +428,7 @@ function Home() {
                 </SliderDiv>
 
                 <SliderDivLast>
-                    <SlideTitle>Up comming movies</SlideTitle>
+                    <SlideTitle>Up comming Movies</SlideTitle>
                     <Slider>
                         <SlideBtn onClick={increaseIndex3}>Next</SlideBtn>
                         <Page>{index3 + 1} / 3</Page>

@@ -353,7 +353,7 @@ function Home() {
                     </BannerDiv>
                 </Banner>
                 <SliderDiv>
-                    <SlideTitle>Popular tv shows</SlideTitle>
+                    <SlideTitle>Popular Tv shows</SlideTitle>
                     <Slider>
                         <SlideBtn onClick={increaseIndex1}>Next</SlideBtn>
                         <Page>{index1 + 1} / 3</Page>
@@ -391,7 +391,7 @@ function Home() {
                 </SliderDiv>
 
                 <SliderDiv>
-                    <SlideTitle>Top rated tv shows</SlideTitle>
+                    <SlideTitle>Top rated Tv shows</SlideTitle>
                     <Slider>
                         <SlideBtn onClick={increaseIndex2}>Next</SlideBtn>
                         <Page>{index2 + 1} / 3</Page>
@@ -429,7 +429,7 @@ function Home() {
                 </SliderDiv>
 
                 <SliderDivLast>
-                    <SlideTitle>Airing today tv shows</SlideTitle>
+                    <SlideTitle>Airing today Tv shows</SlideTitle>
                     <Slider>
                         <SlideBtn onClick={increaseIndex3}>Next</SlideBtn>
                         <Page>{index3 + 1} / 3</Page>

@@ -32,7 +32,11 @@ const router = createBrowserRouter([
         element: <Search />,
       },
       {
-        path: "/Netflix-Clone-Final/search/:category/:id",
+        path: "/Netflix-Clone-Final/search/movies/:id",
+        element: <Search />,
+      },
+      {
+        path: "/Netflix-Clone-Final/search/tv/:id",
         element: <Search />,
       },
     ],
