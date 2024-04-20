@@ -27,6 +27,7 @@ import { useEffect, useState } from "react";
 import { PathMatch, useMatch, useNavigate, useSearchParams } from "react-router-dom"
 import MovieInfo from "../Components/MovieInfo";
 import Tvinfo from "../Components/TvInfo";
+import { TypeAnimation } from "react-type-animation";
 
 const Wrapper = styled.div`
   background: black;
@@ -44,13 +45,8 @@ const SearchTitleDiv = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #606060;
+    background-color: #444444;
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-`;
-
-const SearchTitle = styled.h2`
-    font-size: 50px;
-    font-weight: 600;
 `;
 
 const Loader = styled.div`
@@ -261,6 +257,7 @@ const offset = 6;
 function Search() {
     const [searchParams] = useSearchParams();
     const keyword = searchParams.get(`keyword`);
+    const [nowkeyword, setnowkeyword] = useState(keyword);
     
     const navigate = useNavigate();
     const bigMovieMatch: PathMatch< string> | null = useMatch("/Netflix-Clone-Final/search/movies/:movieId");
@@ -289,6 +286,7 @@ function Search() {
         movieRefetch();
         tvRefetch();
         setLeaving(false);
+        setnowkeyword(keyword);
     }, [keyword, movieRefetch, tvRefetch]);
 
     const increaseIndex1 = () => {
@@ -332,7 +330,17 @@ function Search() {
         ) : (
             <ColumWrapper>
                 <SearchTitleDiv>
-                    <SearchTitle>Search results of "{keyword}"</SearchTitle>
+                    { keyword === nowkeyword ? <TypeAnimation
+                        preRenderFirstString={true}
+                        sequence={[
+                            'Search results of ', // initially rendered starting point.
+                            10,
+                            `Search results of  "${nowkeyword}"`,
+                            1000
+                        ]}
+                        speed={30}
+                        style={{ fontSize: '4em' }}
+                    /> : "No keyword."}
                 </SearchTitleDiv>
                 <SliderDiv>
                     <SlideTitle>Searched Movies</SlideTitle>

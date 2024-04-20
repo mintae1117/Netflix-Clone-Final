@@ -84,8 +84,9 @@ const BannerDiv = styled(motion.div)`
     display: flex;
     flex-direction: column;
     &:hover{
-        background-color: rgba( 0, 0, 0, 0.7 );
+        background-color: rgba( 0, 0, 0, 0.77 );
         transition-duration: 0.3s;
+        box-shadow: gray 0px 0px 7px 0px, gray 0px 0px 1px 0px;
     }
 `;
 

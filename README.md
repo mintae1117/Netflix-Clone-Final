@@ -17,7 +17,7 @@
 
 - `React.js`, `Typescript`, `Javascript`
 - `React-Router-Dom`, `React-hook-form`, `framer-motion`, `Recoil`, `Styled-components`
-- `React-query`, `framer-motion`, `Styled-components`, `Vite`, `themoviedb`
+- `React-query`, `framer-motion`, `Styled-components`, `react-type-animation`, `Vite`, `themoviedb`
 - Deploy : `gh-pages`
 
 <br>
@@ -25,6 +25,7 @@
 ## 😄 사용 가능한 기능, 디자인 설명.
 <p>1. aaa</p>
 <p>2. bbb</p>
+<p>react type animation.
 
 
 ## 0417 겪은 어려움과 해결방법.
