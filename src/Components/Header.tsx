@@ -98,10 +98,9 @@ const logoVariants = {
     fillOpacity: 1,
   },
   active: {
-    fillOpacity: [0.2, 1, 0.2],
+    fillOpacity: [0.1, 1, 0.1],
     transition: {
       repeat: Infinity,
-      fill: { duration: 2, delay: 5 },
     },
   },
 };
