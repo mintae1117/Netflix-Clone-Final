@@ -98,7 +98,7 @@ const Title = styled.h3`
 
 const Overview = styled.p`
   font-size: 25px;
-  width: 90%;
+  width: 97%;
 `;
 
 const SliderDiv = styled.div`
