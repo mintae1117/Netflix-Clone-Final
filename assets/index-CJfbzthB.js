@@ -563,7 +563,7 @@ Error generating stack: `+o.message+`
   margin-bottom: 20px;
 `,kO=ee.p`
   font-size: 25px;
-  width: 90%;
+  width: 97%;
 `,i1=ee.div`
     position: relative;
     margin-bottom: 220px;
