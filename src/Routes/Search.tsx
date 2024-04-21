@@ -274,7 +274,7 @@ function Search() {
         data: tvSearch,
         isLoading: tvSearchLoading,
         refetch: tvRefetch,
-    } = useQuery<IGetTvResult>(["searchtves", "nowPlaying"], () =>
+    } = useQuery<IGetTvResult>(["searchtvs", "nowPlaying"], () =>
         getSearchTves(String(keyword))
     );
 
@@ -334,12 +334,12 @@ function Search() {
                     { keyword === nowkeyword ? <TypeAnimation
                         preRenderFirstString={true}
                         sequence={[
-                            'Search results', // initially rendered starting point.
+                            'Search ', // initially rendered starting point.
                             10,
                             `Search results about "${nowkeyword}".`,
-                            1000
+                            1000,
                         ]}
-                        speed={30}
+                        speed={50}
                         style={{ fontSize: '3.5em' }}
                     /> : "No keyword."}
                 </SearchTitleDiv>

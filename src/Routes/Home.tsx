@@ -81,7 +81,7 @@ const BannerDiv = styled(motion.div)`
     width: auto;
     max-width: 700px;
     min-width: 700px;
-    min-height: 320px;
+    min-height: 300px;
     background-color: rgba( 0, 0, 0, 0.5 );
     display: flex;
     gap: 20px;
@@ -356,20 +356,20 @@ function Home() {
                         <TypeAnimation
                         cursor= {false}
                         sequence={[
-                            `${nowPlaying?.results[0].title}.`,
+                            `${nowPlaying?.results[0].title}`,
                             1000
                         ]}
-                        speed={50}
+                        speed={70}
                         style={{ fontSize: '3.3em' }}
                         />
                         <TypeAnimation
                         sequence={[
-                            1300,
+                            1000,
                             `${nowPlaying?.results[0].overview}`,
                             1000
                         ]}
-                        speed={70}
-                        style={{ fontSize: '1.7em' }}
+                        speed={80}
+                        style={{ fontSize: '1.7em', marginRight: '10px' }}
                         />
                         
                     </BannerDiv>

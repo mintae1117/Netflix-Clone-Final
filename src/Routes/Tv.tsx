@@ -80,6 +80,7 @@ const BannerDiv = styled(motion.div)`
     border-radius: 30px;
     width: auto;
     max-width: 700px;
+    min-width: 700px;
     background-color: rgba( 0, 0, 0, 0.5 );
     display: flex;
     flex-direction: column;
