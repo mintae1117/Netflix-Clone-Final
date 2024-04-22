@@ -24,6 +24,12 @@ const GlobalStyles = createGlobalStyle`
       display: none;
     }// ms scrollbar hidden.
   }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  body {
+    -ms-overflow-style: none;
+  }
   a {
     text-decoration:none;
     color:inherit;
