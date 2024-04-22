@@ -120,8 +120,8 @@ interface IForm {
 
 function Header() {
     const [searchOpen, setSearchOpen] = useState(false);
-    const homeMatch = useMatch("/Netflix-Clone-Final/");
-    const tvMatch = useMatch("/Netflix-Clone-Final/tv");
+    const homeMatch = useMatch("/");
+    const tvMatch = useMatch("/tv");
     const inputAnimation = useAnimation();
     const navAnimation = useAnimation();
     const { scrollY } = useScroll();
@@ -148,14 +148,14 @@ function Header() {
     const history = useNavigate();
     const { register, handleSubmit } = useForm<IForm>();
     const onValid = (data: IForm) => {
-    history(`/Netflix-Clone-Final/search?keyword=${data.keyword}`);
+    history(`/search?keyword=${data.keyword}`);
     };
 
     return (
     <>
     <Nav variants={navVariants} animate={navAnimation} initial="top">
         <Col>
-        <Link to="/Netflix-Clone-Final/">
+        <Link to="/">
         <Logo
             xmlns="http://www.w3.org/2000/svg"
             width="1024"
@@ -172,10 +172,10 @@ function Header() {
         </Link>
         <Items>
             <Item>
-            <Link to="/Netflix-Clone-Final/">Home {homeMatch && <Circle layoutId="circle" />}</Link>
+            <Link to="/">Home {homeMatch && <Circle layoutId="circle" />}</Link>
             </Item>
             <Item>
-            <Link to="/Netflix-Clone-Final/tv">Tv Shows {tvMatch && <Circle layoutId="circle" />}</Link>
+            <Link to="/tv">Tv Shows {tvMatch && <Circle layoutId="circle" />}</Link>
             </Item>
         </Items>
         </Col>

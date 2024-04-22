@@ -271,7 +271,7 @@ const offset = 6;
 
 function Home() {
     const navigate = useNavigate();
-    const bigMovieMatch: PathMatch< string> | null = useMatch("/Netflix-Clone-Final/tv/:category/:tvId");
+    const bigMovieMatch: PathMatch< string> | null = useMatch("/tv/:category/:tvId");
 
     const { data: popular, isLoading: popularloading } =
     useQuery<IGetTvResult>(
@@ -329,10 +329,10 @@ function Home() {
     const toggleLeaving = () => setLeaving((prev) => !prev);
 
     const onBoxClicked = (id: number, category: string) => {
-        navigate(`/Netflix-Clone-Final/tv/${category}/${id}`);
+        navigate(`/tv/${category}/${id}`);
     };
 
-    const onOverlayClick = () => navigate("/Netflix-Clone-Final/tv/");
+    const onOverlayClick = () => navigate("/tv/");
     const clickedMovie = bigMovieMatch?.params.tvId && (popular?.results.find((movie) => movie.id === +bigMovieMatch.params.tvId!) || topRated?.results.find((movie) => movie.id === +bigMovieMatch.params.tvId!) || airing?.results.find((movie) => movie.id === +bigMovieMatch.params.tvId!));
     //수정 필요 / 완료.
 

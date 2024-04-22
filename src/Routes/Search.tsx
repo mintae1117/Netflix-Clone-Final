@@ -260,8 +260,8 @@ function Search() {
     const [nowkeyword, setnowkeyword] = useState(keyword);// save present keyword.
     
     const navigate = useNavigate();
-    const bigMovieMatch: PathMatch< string> | null = useMatch("/Netflix-Clone-Final/search/movies/:movieId");
-    const bigTvMatch: PathMatch< string> | null = useMatch("/Netflix-Clone-Final/search/tv/:movieId");
+    const bigMovieMatch: PathMatch< string> | null = useMatch("/search/movies/:movieId");
+    const bigTvMatch: PathMatch< string> | null = useMatch("/search/tv/:movieId");
 
     const {
         data: movieSearch,
@@ -312,14 +312,14 @@ function Search() {
     const toggleLeaving = () => setLeaving((prev) => !prev);
 
     const onMovieClicked = (movieId: number) => {
-        navigate(`/Netflix-Clone-Final/search/movies/${movieId}?keyword=${keyword}`);
+        navigate(`/search/movies/${movieId}?keyword=${keyword}`);
     };
 
     const onTvClicked = (movieId: number) => {
-        navigate(`/Netflix-Clone-Final/search/tv/${movieId}?keyword=${keyword}`);
+        navigate(`/search/tv/${movieId}?keyword=${keyword}`);
     };
 
-    const onOverlayClick = () => navigate(`/Netflix-Clone-Final/search?keyword=${keyword}`);
+    const onOverlayClick = () => navigate(`/search?keyword=${keyword}`);
 
     const clickedMovie = bigMovieMatch?.params.movieId && (movieSearch?.results.find((movie) => movie.id === +bigMovieMatch.params.movieId!));
     const clickedTv = bigTvMatch?.params.movieId && (tvSearch?.results.find((movie) => movie.id === +bigTvMatch.params.movieId!));

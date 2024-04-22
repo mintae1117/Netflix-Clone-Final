@@ -6,37 +6,37 @@ import Tv from "./Routes/Tv";
 
 const router = createBrowserRouter([
   {
-    path: "/Netflix-Clone-Final/",
+    path: "/",
     element: (
       <Header />
     ),
     children: [
       {
-        path: "/Netflix-Clone-Final/",
+        path: "/",
         element: <Home />,
       },
       {
-        path: "/Netflix-Clone-Final/movies/:category/:id",
+        path: "/movies/:category/:id",
         element: <Home />,
       },
       {
-        path: "/Netflix-Clone-Final/tv",
+        path: "/tv",
         element: <Tv />,
       },
       {
-        path: "/Netflix-Clone-Final/tv/:category/:id",
+        path: "/tv/:category/:id",
         element: <Tv />,
       },
       {
-        path: "/Netflix-Clone-Final/search",
+        path: "/search",
         element: <Search />,
       },
       {
-        path: "/Netflix-Clone-Final/search/movies/:id",
+        path: "/search/movies/:id",
         element: <Search />,
       },
       {
-        path: "/Netflix-Clone-Final/search/tv/:id",
+        path: "/search/tv/:id",
         element: <Search />,
       },
     ],
