@@ -19,6 +19,10 @@ const GlobalStyles = createGlobalStyle`
     color:white;
     line-height: 1.2;
     background-color: black;
+    -ms-overflow-style: none;
+    ::-webkit-scrollbar{
+      display: none;
+    }// ms scrollbar hidden.
   }
   a {
     text-decoration:none;

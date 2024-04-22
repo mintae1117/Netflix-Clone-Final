@@ -201,6 +201,7 @@ const BigTitle = styled.h3`
   padding: 25px;
   font-size: 30px;
   position: relative;
+  white-space : nowrap;
   top: -70px;
 `;
 
