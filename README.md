@@ -1,4 +1,4 @@
-# Netflix Clone Coding. <br> Link : [바로가기](https://mintae1117.github.io/Netflix-Clone-Final/)
+# Netflix Clone Coding. <br> Link : [바로가기](https://minflix-clone-master-6e1lczxe1-mintaekims-projects.vercel.app/)
 
 <h3>Netflix clone coding challenge in nomadcoder.<br>
 리액트 마스터 클래스 챌린지 결과물 입니다.</h3>
