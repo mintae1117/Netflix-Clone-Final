@@ -327,7 +327,7 @@ function Home() {
           const maxIndex = Math.floor(totalMovies / offset) - 1;
           setIndex3((prev) => (prev === maxIndex ? 0 : prev + 1));
         }
-    };// slide 2 increase
+    };// slide 3 increase
 
     const toggleLeaving = () => setLeaving((prev) => !prev);
 
@@ -360,7 +360,7 @@ function Home() {
                             1000
                         ]}
                         speed={70}
-                        style={{ fontSize: '3.3em' }}
+                        style={{ fontSize: '3.3em' }}// banner title text animation.
                         />
                         <TypeAnimation
                         sequence={[
@@ -369,7 +369,7 @@ function Home() {
                             1000
                         ]}
                         speed={80}
-                        style={{ fontSize: '1.7em', marginRight: '10px' }}
+                        style={{ fontSize: '1.7em', marginRight: '10px' }}// banner overview text animation.
                         />
                         
                     </BannerDiv>
@@ -386,7 +386,7 @@ function Home() {
                             animate="visible"
                             exit="exit"
                             transition={{ type: "tween", duration: 1 }}
-                            key={index1}
+                            key={index1}// framer motion animation for slider row.
                             >
                             {nowPlaying?.results
                                 .slice(1)
@@ -400,7 +400,7 @@ function Home() {
                                 variants={boxVariants}
                                 onClick={() => onBoxClicked(movie.id, "nowplaying")}
                                 transition={{ type: "tween" }}
-                                bgphoto={makeImagePath(movie.backdrop_path, "w500")}
+                                bgphoto={makeImagePath(movie.backdrop_path, "w500")}// framer motion animation for slider box.
                                 >
                                     <Info variants={infoVariants}>
                                     <h4>{movie.title}</h4>

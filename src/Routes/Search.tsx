@@ -256,8 +256,8 @@ const offset = 6;
 
 function Search() {
     const [searchParams] = useSearchParams();
-    const keyword = searchParams.get(`keyword`);
-    const [nowkeyword, setnowkeyword] = useState(keyword);
+    const keyword = searchParams.get(`keyword`);// get keyword.
+    const [nowkeyword, setnowkeyword] = useState(keyword);// save present keyword.
     
     const navigate = useNavigate();
     const bigMovieMatch: PathMatch< string> | null = useMatch("/Netflix-Clone-Final/search/movies/:movieId");
@@ -276,7 +276,7 @@ function Search() {
         refetch: tvRefetch,
     } = useQuery<IGetTvResult>(["searchtvs", "nowPlaying"], () =>
         getSearchTves(String(keyword))
-    );
+    );// get searched data of movie and tv shows.
 
     const [index1, setIndex1] = useState(0);
     const [index2, setIndex2] = useState(0);
@@ -287,7 +287,7 @@ function Search() {
         tvRefetch();
         setLeaving(false);
         setnowkeyword(keyword);
-    }, [keyword, movieRefetch, tvRefetch]);
+    }, [keyword, movieRefetch, tvRefetch]);// watch for the keyword change to refetch data.
 
     const increaseIndex1 = () => {
         if (movieSearch) {
@@ -323,6 +323,7 @@ function Search() {
 
     const clickedMovie = bigMovieMatch?.params.movieId && (movieSearch?.results.find((movie) => movie.id === +bigMovieMatch.params.movieId!));
     const clickedTv = bigTvMatch?.params.movieId && (tvSearch?.results.find((movie) => movie.id === +bigTvMatch.params.movieId!));
+    // match clicked movie or tv shows to get data on modal box.
 
     return (
     <Wrapper>
@@ -340,11 +341,16 @@ function Search() {
                             1000,
                         ]}
                         speed={50}
-                        style={{ fontSize: '3.5em' }}
+                        style={{ fontSize: '3.5em' }}// showing keyword title using react-type-animation.
                     /> : "No keyword."}
                 </SearchTitleDiv>
                 <SliderDiv>
-                    <SlideTitle>Searched Movies<span style={{fontSize: "17px"}}>{movieSearch?.results.length !== 0 ? ` / Found ${movieSearch?.results.length} results.` : " / No results found."}</span></SlideTitle>
+                    <SlideTitle>Searched Movies
+                        <span style={{fontSize: "17px"}}>
+                            {movieSearch?.results.length !== 0 ? 
+                            ` / Found ${movieSearch?.results.length} results.` : " / No results found." }
+                        </span>
+                    </SlideTitle>
                     <Slider>
                         <SlideBtn onClick={increaseIndex1}>Next</SlideBtn>
                         <Page>{index1 + 1} / {movieSearch ? Math.floor(movieSearch?.results.length / offset) + 1 : 1}</Page>
@@ -382,7 +388,12 @@ function Search() {
                 </SliderDiv>
 
                 <SliderDivLast>
-                    <SlideTitle>Searched Tv shows<span style={{fontSize: "17px"}}>{tvSearch?.results.length !== 0 ? ` / Found ${tvSearch?.results.length} results.` : " / No results found."}</span></SlideTitle>
+                    <SlideTitle>Searched Tv shows
+                        <span style={{fontSize: "17px"}}>
+                            {tvSearch?.results.length !== 0 ? ` / Found ${tvSearch?.results.length} results.` 
+                            : " / No results found." }
+                        </span>
+                    </SlideTitle>
                     <Slider>
                         <SlideBtn onClick={increaseIndex2}>Next</SlideBtn>
                         <Page>{index2 + 1} / {tvSearch ? Math.floor(tvSearch?.results.length / offset) + 1 : 1}</Page>
@@ -458,7 +469,7 @@ function Search() {
                             )}
                         </BigMovie>
                     </>
-                ) : null}
+                ) : null /* For clicked movies */}
                 </AnimatePresence>
 
                 <AnimatePresence>
@@ -500,7 +511,7 @@ function Search() {
                             )}
                         </BigMovie>
                     </>
-                ) : null}
+                ) : null/* For clicked tv shows */}
                 </AnimatePresence>
 
             </ColumWrapper>

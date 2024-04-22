@@ -14,7 +14,7 @@ const DetailDiv = styled.div`
 
 export default function Tvinfo({ videoId }: { videoId: string }) {
     const { data } = useQuery<IGetDetailTvResult>(
-        ["tv", "detail"],
+        ["tvdetail", "detail"],
         () => getVideoDetail("tv", videoId)
     );
     

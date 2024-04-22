@@ -324,7 +324,7 @@ function Home() {
           const maxIndex = Math.floor(totalMovies / offset) - 1;
           setIndex3((prev) => (prev === maxIndex ? 0 : prev + 1));
         }
-    };// slide 2 increase
+    };// slide 3 increase
 
     const toggleLeaving = () => setLeaving((prev) => !prev);
 

@@ -47,6 +47,6 @@ function App() {
   return (
     <RouterProvider router={router}></RouterProvider>
   );
-}// 걍 일부로 hashrouter 안썼음.
+}// 걍 일부로 hashrouter 안썼음. => gh-page routing 문제는 나중에 vercel로 재배포 할거라 무시.
 
 export default App

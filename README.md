@@ -54,3 +54,6 @@ check
 <p>그리고 search 에서 movie 와 tv 결과들을 보여줄때 서로 다른 animatepresence를 써주는것이 좋다.
 <p>괜히 같이 써보려다가 error만 더 나게된다.
 <p>마지막으로 router에 관련된 값들을 정확하게 맞춰줘야 api를 불러올때도 error가 안난다. 조심하자.
+
+## 2024 / 04 / 22 마무리.
+<p>약간의 css 수정과 react-type-animation 추가, 그리고 react-query 충돌 버그 수정 등 찾아낸 error,bug등을 고치고 디자인 조금 바꾸면서 마무리 했습니다.
