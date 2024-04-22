@@ -33,6 +33,10 @@ const Wrapper = styled.div`
   background: black;
   padding-bottom: 200px;
   overflow-x: hidden;
+  -ms-overflow-style: none;
+    ::-webkit-scrollbar{
+      display: none;
+    }// ms scrollbar hidden.
 `;
 
 const ColumWrapper = styled.div`
