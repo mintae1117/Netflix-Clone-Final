@@ -350,7 +350,7 @@ function Home() {
                     //onClick={increaseIndex}
                     bgphoto={makeImagePath(nowPlaying?.results[0].backdrop_path || "")}
                     >
-                    { nowPlaying?.results[0].title === null ? null : 
+                    { nowPlaying?.results[0].title === undefined ? null : 
                       <BannerDiv 
                       onClick={() => onBoxClicked(Number(nowPlaying?.results[0].id), "nowplaying")}
                       layoutId={String(nowPlaying?.results[0].id) + "nowplaying"}
