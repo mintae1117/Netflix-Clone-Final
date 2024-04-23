@@ -350,10 +350,11 @@ function Home() {
                     //onClick={increaseIndex}
                     bgphoto={makeImagePath(nowPlaying?.results[0].backdrop_path || "")}
                     >
-                    <BannerDiv 
-                        onClick={() => onBoxClicked(Number(nowPlaying?.results[0].id), "nowplaying")}
-                        layoutId={String(nowPlaying?.results[0].id) + "nowplaying"}
-                    >
+                    { nowPlaying?.results[0].title === null ? null : 
+                      <BannerDiv 
+                      onClick={() => onBoxClicked(Number(nowPlaying?.results[0].id), "nowplaying")}
+                      layoutId={String(nowPlaying?.results[0].id) + "nowplaying"}
+                      >
                         <TypeAnimation
                         cursor= {false}
                         sequence={[
@@ -372,8 +373,8 @@ function Home() {
                         speed={80}
                         style={{ fontSize: '1.7em', marginRight: '10px' }}// banner overview text animation.
                         />
-                        
-                    </BannerDiv>
+                      </BannerDiv>
+                    }
                 </Banner>
                 <SliderDiv>
                     <SlideTitle>Now playing Movies</SlideTitle>
