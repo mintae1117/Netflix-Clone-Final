@@ -26,10 +26,10 @@ const GlobalStyles = createGlobalStyle`
   }
   body::-webkit-scrollbar {
     display: none;
-  }
+  }// ms scrollbar hidden.
   body {
     -ms-overflow-style: none;
-  }
+  }// ms scrollbar hidden.
   a {
     text-decoration:none;
     color:inherit;
