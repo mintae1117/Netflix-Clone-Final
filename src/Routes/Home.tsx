@@ -366,7 +366,7 @@ function Home() {
                         />
                         <TypeAnimation
                         sequence={[
-                            1000,
+                            1500,
                             `${nowPlaying?.results[0].overview}`,
                             1000
                         ]}
