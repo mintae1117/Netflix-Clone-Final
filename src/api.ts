@@ -97,6 +97,7 @@ export function getUpcomingMovies() {
   ).then((response) => response.json());
 }// movie
 
+
 export function getTves() {
   return fetch(
       `${BASE_PATH}/tv/popular?api_key=${API_KEY}`
@@ -129,3 +130,31 @@ export function getVideoDetail(category: "movie" | "tv", id: string) {
       `${BASE_PATH}${category}/${id}?api_key=${API_KEY}`
   ).then((response) => response.json());
 }// detail
+
+/* Video */
+interface IVideoResults {
+  iso_639_1: string;
+  iso_3166_1: string;
+  name: string;
+  key: string;
+  site: string;
+  size: number;
+  type: string;
+  official: boolean;
+  published_at: string;
+  id: string;
+}
+
+export interface IGetVideo {
+  id: number;
+  results: IVideoResults[] | [];
+  success?: boolean;
+}
+
+// Get video URL of item
+export async function getVideo(itemId: number, mediaType: "movie" | "tv") {
+  return await (
+    await fetch(
+      `${BASE_PATH}/${mediaType}/${itemId}/videos?api_key=${API_KEY}`)
+  ).json();
+}

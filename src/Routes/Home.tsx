@@ -5,7 +5,7 @@ import {
     getMovies, 
     getTopRatedMovies, 
     getUpcomingMovies, 
-    IGetMoviesResult, 
+    IGetMoviesResult,
 } from "../api";
 import { makeImagePath } from "../utils";
 import { useState } from "react";
@@ -208,7 +208,7 @@ const PosterCover = styled.div`
     position: absolute;
     top: 33px;
     left: 30px;
-    width: 30%;
+    width: 210px;
     height: 300px;
     background-size: cover;
     background-position: center center;
