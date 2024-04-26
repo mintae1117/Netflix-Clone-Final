@@ -152,7 +152,7 @@ export interface IGetVideo {
 }
 
 // Get video URL of item
-export async function getVideo(itemId: number, mediaType: "movie" | "tv") {
+export async function getVideo(itemId: string, mediaType: "movie" | "tv") {
   return await (
     await fetch(
       `${BASE_PATH}/${mediaType}/${itemId}/videos?api_key=${API_KEY}`)
