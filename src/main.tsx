@@ -20,9 +20,6 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.2;
     background-color: black;
     -ms-overflow-style: none;
-    ::-webkit-scrollbar{
-      display: none;
-    }// ms scrollbar hidden.
   }
   body::-webkit-scrollbar {
     display: none;
