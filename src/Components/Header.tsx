@@ -66,7 +66,7 @@ const Search = styled.form`
     height: 25px;
     cursor: pointer;
     &:hover{
-      color: gray;
+      color: #dadada;
     }
   }
 `;
@@ -85,6 +85,9 @@ const Input = styled(motion.input)`
   background-color: transparent;
   border: 1px solid ${(props) => props.theme.white.lighter};
   border-radius: 5px;
+  &::placeholder{
+    color: #c6c6c6;
+  }// "&" 이거쫌 잘쓰자 제발 제발 styled components 쓸때는 안되면 & 붙여볼 생각부터 하자 쫌.
 `;
 
 const Circle = styled(motion.span)`

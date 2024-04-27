@@ -14,7 +14,7 @@ const DetailDiv = styled.div`
 
 const PlayBtn = styled.button`
     svg{
-        margin-left: 5px;
+        margin-left: 7px;
         width: 25px;
     }
     cursor: pointer;
@@ -22,12 +22,12 @@ const PlayBtn = styled.button`
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 7px;
+    gap: 5px;
     font-size: 17px;
     width: 150px;
-    height: 30px;
-    bottom: 5px;
-    right: 5px;
+    height: 35px;
+    bottom: 7px;
+    right: 10px;
     border-radius: 10px;
     border: transparent;
     &:hover{
