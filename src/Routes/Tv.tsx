@@ -343,18 +343,20 @@ function Home() {
         <Loader>Loading...</Loader>
         ) : (
             <ColumWrapper>
-                <Banner
-                    //onClick={increaseIndex}
-                    bgphoto={makeImagePath(popular?.results[0].backdrop_path || "")}
-                    >
-                    <BannerDiv 
-                        onClick={() => onBoxClicked(Number(popular?.results[0].id), "popular")}
-                        layoutId={String(popular?.results[0].id) + "popular"}
-                    >
-                        <Title>{popular?.results[0].name}</Title>
-                        <Overview>{popular?.results[0].overview}</Overview>
-                    </BannerDiv>
-                </Banner>
+                { popular?.results[0].name === undefined ? null : 
+                  <Banner
+                      //onClick={increaseIndex}
+                      bgphoto={makeImagePath(popular?.results[0].backdrop_path || "")}
+                      >
+                      <BannerDiv 
+                          onClick={() => onBoxClicked(Number(popular?.results[0].id), "popular")}
+                          layoutId={String(popular?.results[0].id) + "popular"}
+                      >
+                          <Title>{popular?.results[0].name}</Title>
+                          <Overview>{popular?.results[0].overview}</Overview>
+                      </BannerDiv>
+                  </Banner>
+                }
                 <SliderDiv>
                     <SlideTitle>Popular Tv shows</SlideTitle>
                     <Slider>
