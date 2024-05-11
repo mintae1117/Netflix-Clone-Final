@@ -1,4 +1,4 @@
-# Netflix Clone Coding. <br> Link : [바로가기](https://minflix-clone-master.vercel.app/)
+# Netflix Clone Coding. <br> Link : [바로가기](https://minflix-master.vercel.app)
 
 <h3>Netflix clone coding challenge in nomadcoder.<br>
 리액트 마스터 클래스 챌린지 결과물 입니다.</h3>
