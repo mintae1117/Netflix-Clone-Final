@@ -59,3 +59,6 @@ check
 <p>배포를 gh-pages에서 vercel deploy로 변경했습니다. 변경하는 과정에서 새로고침 했을때 404 error 가 뜨는 문제점을 고치기 위해 vercel.json 파일을 추가해서 rewrite destination을 지정해줌으로써 404 error 버그를 고쳤습니다.
 <p>약간의 css 수정과 react-type-animation 추가, 그리고 react-query 충돌 버그 수정 등 찾아낸 error,bug등을 고치고 디자인 조금 바꾸면서 마무리 했습니다.
 test.
+
+## 2024 / 05~
+<p>UI 닦으면서 여러가지 버그들 에러들 ui적으로 불편한 부분들 수정 및 기능 추가.(ex. text animation, search modal auto close, drag bar delete, etc...)
