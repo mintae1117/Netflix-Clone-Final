@@ -1,5 +1,5 @@
-const API_KEY = "08c938092f336bc7dcbf61cca57f1a43";
-const BASE_PATH = "https://api.themoviedb.org/3/";
+const API_KEY = "a320e2126397a04e7e53b350d7db38b3";
+const BASE_PATH = "https://api.themoviedb.org/3";
 
 interface IMovie {
     id: number;
