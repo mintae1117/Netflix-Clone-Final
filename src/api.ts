@@ -116,18 +116,18 @@ export function getAiringTodayTves() {
 
 export function getSearchMovies(keyword: string) {
   return fetch(
-      `${BASE_PATH}search/movie?query=${keyword}&api_key=${API_KEY}`
+      `${BASE_PATH}/search/movie?query=${keyword}&api_key=${API_KEY}`
   ).then((response) => response.json());
 }
 export function getSearchTves(keyword: string) {
   return fetch(
-      `${BASE_PATH}search/tv?query=${keyword}&api_key=${API_KEY}`
+      `${BASE_PATH}/search/tv?query=${keyword}&api_key=${API_KEY}`
   ).then((response) => response.json());
 }// search
 
 export function getVideoDetail(category: "movie" | "tv", id: string) {
   return fetch(
-      `${BASE_PATH}${category}/${id}?api_key=${API_KEY}`
+      `${BASE_PATH}/${category}/${id}?api_key=${API_KEY}`
   ).then((response) => response.json());
 }// detail
 
