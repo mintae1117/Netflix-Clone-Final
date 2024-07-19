@@ -55,12 +55,12 @@ export default function MovieInfo({ videoId }: { videoId: string }) {
 
     return(
         <DetailDiv>
-            <p>· Release date : {data?.release_date}</p>
-            <p>· Country : {data?.production_countries[0]?.name}</p>
-            <p>· Genres : {data?.genres?.map((props) => props.name + " / ")}etc.</p>
-            <p>· Rating : {data?.vote_average?.toFixed(1)} / 10</p>
-            <p>· Language : {data?.spoken_languages[0]?.english_name}</p>
-            <p>· Runtime : {data?.runtime}m</p>
+            {data?.release_date ? <p>· Release date : {data?.release_date}</p> : null}
+            {data?.production_countries[0]?.name ? <p>· Country : {data?.production_countries[0]?.name}</p> : null}
+            {data?.genres[0] ? <p>· Genres : {data?.genres?.map((props) => props.name + " / ")}etc.</p> : null}
+            {data?.vote_average?.toFixed(1) ? <p>· Rating : {data?.vote_average?.toFixed(1)} / 10</p> : null}
+            {data?.spoken_languages[0]?.english_name ? <p>· Language : {data?.spoken_languages[0]?.english_name}</p> : null}
+            {data?.runtime ? <p>· Runtime : {data?.runtime}m</p> : null}
             <PlayBtn onClick={openYoutube}>
                 <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path clipRule="evenodd" fillRule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" />
