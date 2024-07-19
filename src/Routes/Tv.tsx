@@ -473,7 +473,7 @@ function Home() {
                 
                 <AnimatePresence>
                 {bigMovieMatch ? (
-                    <>
+                    <div>
                         <Overlay
                             onClick={onOverlayClick}
                             exit={{ opacity: 0 }}
@@ -509,7 +509,7 @@ function Home() {
                             </>
                             )}
                         </BigMovie>
-                    </>
+                    </div>
                 ) : null}
                 </AnimatePresence>
             </ColumWrapper>

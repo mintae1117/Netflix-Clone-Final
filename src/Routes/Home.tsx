@@ -275,7 +275,7 @@ const offset = 6;
 
 function Home() {
     const navigate = useNavigate();
-    const bigMovieMatch: PathMatch< string> | null = useMatch("/movies/:category/:movieId");
+    const bigMovieMatch: PathMatch<string> | null = useMatch("/movies/:category/:movieId");
 
     const { data: nowPlaying, isLoading: nowPlayingLoading } =
     useQuery<IGetMoviesResult>(
@@ -492,7 +492,7 @@ function Home() {
                 
                 <AnimatePresence>
                 {bigMovieMatch ? (
-                    <>
+                    <div>
                         <Overlay
                             onClick={onOverlayClick}
                             exit={{ opacity: 0 }}
@@ -528,7 +528,7 @@ function Home() {
                             </>
                             )}
                         </BigMovie>
-                    </>
+                    </div>
                 ) : null}
                 </AnimatePresence>
             </ColumWrapper>

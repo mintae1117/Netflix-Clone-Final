@@ -77,3 +77,4 @@ test.
 <p>1. api 가 불러오지 못하는 내용들(특히 detail data)들에 관한 예외처리 해주기.
 <p>2. 불필요한 api 요청 코드 부분 로직 수정하기 및 기타 버그들 수정하기(frammer motion animation).
 <p>3. 컴포넌트 난잡한데 최대한 가독성 있게 재활용성 있게 바꾸기.
+<p>4. Trailers page 추가하기 video 요청시 가져오는 20개 가량의 배열에 있는 key 값들중 하나만 써서 보여주던 trailer를 모두 보여주는 화면을 구현해보자.

@@ -16,22 +16,26 @@ const PlayBtn = styled.button`
     svg{
         margin-left: 7px;
         width: 25px;
+        color: white;
     }
     cursor: pointer;
     position: absolute;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5px;
+    gap: 7px;
     font-size: 17px;
-    width: 150px;
-    height: 35px;
+    font-weight: 500;
+    width: 170px;
+    height: 40px;
     bottom: 7px;
-    right: 10px;
-    border-radius: 10px;
+    right: 5px;
+    border-radius: 7px;
     border: transparent;
+    color: white;
+    background-color: #FF1512;
     &:hover{
-        background-color: #a5a5a5;
+        background-color: #9d0b0b;
     }
 `;
 
@@ -46,8 +50,7 @@ export default function Tvinfo({ videoId }: { videoId: string }) {
         () => getVideo(videoId, "tv")
     );
 
-    const youtubeKey = videourl?.results.filter((item) => item.site === "YouTube")[0]
-    ?.key;
+    const youtubeKey = videourl?.results.filter((item) => item.site === "YouTube")[0]?.key;
 
     const openYoutube = () => {
         window.open(`https://www.youtube.com/embed/${youtubeKey}?rel=0&vq=hd1080&autoplay=1`);
@@ -65,7 +68,7 @@ export default function Tvinfo({ videoId }: { videoId: string }) {
                 <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path clipRule="evenodd" fillRule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" />
                 </svg>
-                Play Trailer
+                Show Trailers
             </PlayBtn>
         </DetailDiv>
     );
