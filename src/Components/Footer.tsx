@@ -9,7 +9,6 @@ const FooterDiv = styled.div`
 
 const Footercontent = styled.h3`
     font-size: 20px;
-    margin-top: -50px;
 `;
 
 const Linka = styled.span`

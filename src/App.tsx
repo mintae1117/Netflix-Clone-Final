@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import Home from "./Routes/Home";
 import Search from "./Routes/Search";
 import Tv from "./Routes/Tv";
+import Trailers from "./Routes/Trailers";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
         path: "/search/tv/:id",
         element: <Search />,
       },
+      {
+        path: "/trailers/:id",
+        element: <Trailers />,
+      }
     ],
   },
 ]);// router setting, 라우터를 layout + outlet으로 하고 새로운 route로 이동하기 위한 세팅

@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { IGetDetailMovieResult, IGetVideo, getVideo, getVideoDetail } from "../api";
+import { IGetDetailMovieResult, getVideoDetail } from "../api";
 import { useQuery } from "react-query";
+import { useNavigate } from "react-router-dom";
 
 const DetailDiv = styled.div`
     position: relative;
@@ -40,21 +41,16 @@ const PlayBtn = styled.button`
 `;
 
 export default function MovieInfo({ videoId }: { videoId: string }) {
+    const navigate = useNavigate();
+
     const { data } = useQuery<IGetDetailMovieResult>(
         ["moviedetail", "detail"],
         () => getVideoDetail("movie", videoId)
     );
-    
-    const { data : videourl } = useQuery<IGetVideo>(
-        ["video", "videourl"],
-        () => getVideo(videoId, "movie")
-    );
 
-    const youtubeKey = videourl?.results.filter((item) => item.site === "YouTube")[0]?.key;
-
-    const openYoutube = () => {
-        window.open(`https://www.youtube.com/embed/${youtubeKey}?rel=0&vq=hd1080&autoplay=1`);
-    }
+    const onClickTrailers = (videoId: string) => {
+        navigate(`/trailers/${videoId}`);
+    };
 
     return(
         <DetailDiv>
@@ -64,7 +60,7 @@ export default function MovieInfo({ videoId }: { videoId: string }) {
             {data?.vote_average?.toFixed(1) ? <p>· Rating : {data?.vote_average?.toFixed(1)} / 10</p> : null}
             {data?.spoken_languages[0]?.english_name ? <p>· Language : {data?.spoken_languages[0]?.english_name}</p> : null}
             {data?.runtime ? <p>· Runtime : {data?.runtime}m</p> : null}
-            <PlayBtn onClick={openYoutube}>
+            <PlayBtn onClick={() => onClickTrailers(videoId)}>
                 <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path clipRule="evenodd" fillRule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" />
                 </svg>
