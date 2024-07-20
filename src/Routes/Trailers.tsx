@@ -85,6 +85,7 @@ function Trailers () {
                         title={video.name}
                     />
                 ))}
+                {youtubeKey?.length === 0 ? <h1 style={{fontSize: 30}}>No results found</h1> : null}
             </TrailerGrid>
         </TrailerWrapper>
     );
