@@ -1,10 +1,10 @@
 import { useQuery } from "react-query";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { IGetVideo, getVideo } from "../api";
 import styled from "styled-components";
 
 const TrailerWrapper = styled.div`
-    min-height: 100vh;
+    min-height: 90vh;
     height: 100%;
     width: 100%;
     margin-bottom: 50px;
@@ -21,20 +21,20 @@ const TrailerGrid = styled.div`
 
 function Trailers () {
     const videoId = useParams();
+    const location = useLocation();
+    //console.log("asfrshdrgdkngdjkgfndisufnsijfn", location);
 
     const { data : videourl } = useQuery<IGetVideo>(
         ["video", "videourl"],
-        () => getVideo(String(videoId.id), "movie")
+        () => getVideo(String(videoId.id), location.state)
     );
 
-    // const youtubeKey = videourl?.results.filter((item) => item.site === "YouTube")[0]?.key;
     const youtubeKey = videourl?.results.filter((item) => item.site === "YouTube");
-    console.log("youtubeKeyyoutubeKeyyoutubeKeyyoutubeKeyyoutubeKeyyoutubeKey", youtubeKey)
 
     return (
         <TrailerWrapper>
             <div style={{display:"flex", height: 200, alignItems:"center", justifyContent:"center", textAlign:"center"}}>
-                <h1>Trailers</h1>
+                <h1 style={{fontSize: 50}}>Trailers</h1>
             </div>
             <TrailerGrid>
                 {youtubeKey?.map((video) => (
@@ -52,34 +52,3 @@ function Trailers () {
 }
 
 export default Trailers
-
-// id
-// : 
-// "6674f0f178b39f538271e0ec"
-// iso_639_1
-// : 
-// "en"
-// iso_3166_1
-// : 
-// "US"
-// key
-// : 
-// "RY5aH21ohU4"
-// name
-// : 
-// "Time to Celebrate"
-// official
-// : 
-// true
-// published_at
-// : 
-// "2024-06-19T17:41:37.000Z"
-// site
-// : 
-// "YouTube"
-// size
-// : 
-// 1080
-// type
-// : 
-// "Teaser"

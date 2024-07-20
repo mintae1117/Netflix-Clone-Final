@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { IGetDetailTvResult, IGetVideo, getVideo, getVideoDetail } from "../api";
+import { IGetDetailTvResult, getVideoDetail } from "../api";
 import { useQuery } from "react-query";
+import { useNavigate } from "react-router-dom";
 
 const DetailDiv = styled.div`
     position: relative;
@@ -40,21 +41,16 @@ const PlayBtn = styled.button`
 `;
 
 export default function Tvinfo({ videoId }: { videoId: string }) {
+    const navigate = useNavigate();
+
     const { data : detailTv } = useQuery<IGetDetailTvResult>(
         ["tvdetail", "detail"],
         () => getVideoDetail("tv", videoId)
     );
 
-    const { data : videourl } = useQuery<IGetVideo>(
-        ["video", "videourl"],
-        () => getVideo(videoId, "tv")
-    );
-
-    const youtubeKey = videourl?.results.filter((item) => item.site === "YouTube")[0]?.key;
-
-    const openYoutube = () => {
-        window.open(`https://www.youtube.com/embed/${youtubeKey}?rel=0&vq=hd1080&autoplay=1`);
-    }
+    const onClickTrailers = (videoId: string) => {
+        navigate(`/trailers/${videoId}`, {state: "tv"});
+    };
     
     return(
         <DetailDiv>
@@ -64,7 +60,7 @@ export default function Tvinfo({ videoId }: { videoId: string }) {
             {detailTv?.spoken_languages[0]?.english_name ? <p>· Language : {detailTv?.spoken_languages[0]?.english_name}</p> : null}
             {detailTv?.number_of_seasons ? <p>· Number of seasons : {detailTv?.number_of_seasons}</p> : null}
             {detailTv?.number_of_episodes ? <p>· Number of episodes : {detailTv?.number_of_episodes}</p> : null}
-            <PlayBtn onClick={openYoutube}>
+            <PlayBtn onClick={() => onClickTrailers(videoId)}>
                 <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path clipRule="evenodd" fillRule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" />
                 </svg>
