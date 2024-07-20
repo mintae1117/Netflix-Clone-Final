@@ -32,11 +32,19 @@ const TrailerGrid = styled.div`
     }
 `;
 
+const TrailerTitleDiv = styled.div`
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444444;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+`;
+
 function Trailers () {
     const videoId = useParams();
     const location = useLocation();
     const navigate = useNavigate();
-    //console.log("locationlocationlocationlocationlocation", location);
 
     const { data : videourl } = useQuery<IGetVideo>(
         ["video", "videourl"],
@@ -47,10 +55,10 @@ function Trailers () {
 
     return (
         <TrailerWrapper>
-            <div style={{display:"flex", height: 200, alignItems:"center", justifyContent:"center", textAlign:"center"}}>
+            <TrailerTitleDiv>
                 <h1 style={{fontSize: 50}}>Trailers About {location.state.title !== undefined ? `"${location.state.title}"` : "No Title"}</h1>
                 <button onClick={() => navigate(-1)}>뒤로가기</button>
-            </div>
+            </TrailerTitleDiv>
             <TrailerGrid>
                 {youtubeKey?.map((video) => (
                     <iframe

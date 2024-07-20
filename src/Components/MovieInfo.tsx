@@ -11,6 +11,7 @@ const DetailDiv = styled.div`
     top: -100px;
     font-size: 18px;
     font-weight: 500;
+    min-height: 100px;
 `;
 
 const PlayBtn = styled.button`
