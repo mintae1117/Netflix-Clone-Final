@@ -49,7 +49,7 @@ export default function MovieInfo({ videoId }: { videoId: string }) {
     );
 
     const onClickTrailers = (videoId: string) => {
-        navigate(`/trailers/${videoId}`, {state: "movie"});
+        navigate(`/trailers/${videoId}`, {state: {category: "movie", title: data?.title}});
     };
 
     return(

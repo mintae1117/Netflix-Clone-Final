@@ -40,7 +40,7 @@ function Trailers () {
 
     const { data : videourl } = useQuery<IGetVideo>(
         ["video", "videourl"],
-        () => getVideo(String(videoId.id), location.state)
+        () => getVideo(String(videoId.id), location.state.category)
     );
 
     const youtubeKey = videourl?.results.filter((item) => item.site === "YouTube");
@@ -48,7 +48,7 @@ function Trailers () {
     return (
         <TrailerWrapper>
             <div style={{display:"flex", height: 200, alignItems:"center", justifyContent:"center", textAlign:"center"}}>
-                <h1 style={{fontSize: 50}}>Show Trailers</h1>
+                <h1 style={{fontSize: 50}}>Trailers About {location.state.title !== undefined ? `"${location.state.title}"` : "No Title"}</h1>
                 <button onClick={() => navigate(-1)}>뒤로가기</button>
             </div>
             <TrailerGrid>
