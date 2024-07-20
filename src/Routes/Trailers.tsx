@@ -17,13 +17,26 @@ const TrailerGrid = styled.div`
     max-width: 100%;
     width: 100%;
     margin: 0 auto;
+    padding: 30px;
+    @media (max-width: 1678px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 1350px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 995px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 675px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 `;
 
 function Trailers () {
     const videoId = useParams();
     const location = useLocation();
     const navigate = useNavigate();
-    //console.log("asfrshdrgdkngdjkgfndisufnsijfn", location);
+    //console.log("locationlocationlocationlocationlocation", location);
 
     const { data : videourl } = useQuery<IGetVideo>(
         ["video", "videourl"],
