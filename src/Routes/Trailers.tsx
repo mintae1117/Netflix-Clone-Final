@@ -41,6 +41,16 @@ const TrailerTitleDiv = styled.div`
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 `;
 
+const GoBackBtn = styled.button`
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 40px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+`;
+
 function Trailers () {
     const videoId = useParams();
     const location = useLocation();
@@ -56,8 +66,8 @@ function Trailers () {
     return (
         <TrailerWrapper>
             <TrailerTitleDiv>
-                <h1 style={{fontSize: 50}}>Trailers About {location.state.title !== undefined ? `"${location.state.title}"` : "No Title"}</h1>
-                <button onClick={() => navigate(-1)}>뒤로가기</button>
+                <h3 style={{fontSize: 50}}>Trailers About {location.state.title !== undefined ? `"${location.state.title}"` : "No Title"}</h3>
+                <GoBackBtn onClick={() => navigate(-1)}>GO BACK</GoBackBtn>
             </TrailerTitleDiv>
             <TrailerGrid>
                 {youtubeKey?.map((video) => (
