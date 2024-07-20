@@ -47,7 +47,6 @@ const GoBackBtn = styled.button`
     padding-right: 15px;
     height: 40px;
     margin-left: 20px;
-    margin-bottom: 10px;
     font-size: 15px;
     background-color: white;
     border: transparent;
