@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { IGetVideo, getVideo } from "../api";
 import styled from "styled-components";
 
@@ -22,6 +22,7 @@ const TrailerGrid = styled.div`
 function Trailers () {
     const videoId = useParams();
     const location = useLocation();
+    const navigate = useNavigate();
     //console.log("asfrshdrgdkngdjkgfndisufnsijfn", location);
 
     const { data : videourl } = useQuery<IGetVideo>(
@@ -34,7 +35,8 @@ function Trailers () {
     return (
         <TrailerWrapper>
             <div style={{display:"flex", height: 200, alignItems:"center", justifyContent:"center", textAlign:"center"}}>
-                <h1 style={{fontSize: 50}}>Trailers</h1>
+                <h1 style={{fontSize: 50}}>Show Trailers</h1>
+                <button onClick={() => navigate(-1)}>뒤로가기</button>
             </div>
             <TrailerGrid>
                 {youtubeKey?.map((video) => (
