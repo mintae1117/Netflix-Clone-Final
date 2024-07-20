@@ -76,7 +76,7 @@ function Trailers () {
                 <GoBackBtn onClick={() => navigate(-1)}>GO BACK</GoBackBtn>
             </TrailerTitleDiv>
             <TrailerGrid>
-                {youtubeKey?.map((video) => (
+                {youtubeKey?.slice(0, 25).map((video) => (/*최대 25개 까지만 가져오기*/
                     <iframe
                         key={video.key}
                         src={`https://www.youtube.com/embed/${video.key}?rel=0&vq=hd1080&autoplay=0`}
