@@ -49,6 +49,13 @@ const GoBackBtn = styled.button`
     margin-left: 20px;
     margin-bottom: 10px;
     font-size: 15px;
+    background-color: white;
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
+        background-color: #797979;
+    }
 `;
 
 function Trailers () {

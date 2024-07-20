@@ -5,6 +5,7 @@ const FooterDiv = styled.div`
     width: 100%;
     text-align: center;
     background-color: transparent;
+    margin-bottom: 20px;
 `;
 
 const Footercontent = styled.h3`
