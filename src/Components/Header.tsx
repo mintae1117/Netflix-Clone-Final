@@ -155,10 +155,10 @@ function Header() {
         </Link>
         <Items>
             <Item>
-            <Link onClick={toggleSearchFalse} to="/">Home {homeMatch && <Circle layoutId="circle" />}</Link>
+            <Link style={{fontWeight: 500}} onClick={toggleSearchFalse} to="/">Home {homeMatch && <Circle layoutId="circle" />}</Link>
             </Item>
             <Item>
-            <Link onClick={toggleSearchFalse} to="/tv">Tv Shows {tvMatch && <Circle layoutId="circle" />}</Link>
+            <Link style={{fontWeight: 500}} onClick={toggleSearchFalse} to="/tv">Tv Shows {tvMatch && <Circle layoutId="circle" />}</Link>
             </Item>
         </Items>
         </Col>
