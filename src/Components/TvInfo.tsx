@@ -31,7 +31,7 @@ const PlayBtn = styled.button`
     width: 170px;
     height: 40px;
     bottom: 7px;
-    right: 5px;
+    right: 1px;
     border-radius: 7px;
     border: transparent;
     color: white;
