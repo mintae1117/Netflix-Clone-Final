@@ -84,6 +84,7 @@ function Trailers () {
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                         title={video.name}
+                        style={{width: "100%"}}
                     />
                 ))}
                 {youtubeKey?.length === 0 ? <h1 style={{fontSize: 30}}>No results found</h1> : null}
