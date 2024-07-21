@@ -151,7 +151,7 @@ function Header() {
     <Nav variants={navVariants} animate={navAnimation} initial="top">
         <Col>
         <Link to="/">
-          <img onClick={toggleSearchFalse} src="/minflix-logo.png" style={{width: 120, height: 35}}/>
+          <img onClick={toggleSearchFalse} src="/minflix.png" style={{width: 120, height: 25}}/>
         </Link>
         <Items>
             <Item>
