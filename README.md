@@ -78,4 +78,4 @@ test.
 <p>3. 컴포넌트 난잡한데 최대한 가독성 있게 재활용성 있게 바꾸기.
 <p>4. Trailers page 추가하기 video 요청시 가져오는 20개 가량의 배열에 있는 key 값들중 하나만 써서 보여주던 trailer를 모두 보여주는 화면을 구현해보자.
 <p>5. Trailers css gird 에 반응형 추가해보기 => width 별로 grid 조절해서 구현.
-<p>그외 로고 변경, trailer title css 변경 등등 여러가지 추가 refactor 진행.
+<p>6. 그외 로고 변경, trailer title css 변경 등등 여러가지 추가 refactor 진행.
