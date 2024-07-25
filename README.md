@@ -79,3 +79,4 @@ test.
 <p>4. Trailers page 추가하기 video 요청시 가져오는 20개 가량의 배열에 있는 key 값들중 하나만 써서 보여주던 trailer를 모두 보여주는 화면을 구현해보자.
 <p>5. Trailers css gird 에 반응형 추가해보기 => width 별로 grid 조절해서 구현.
 <p>6. 그외 로고 변경, trailer title css 변경 등등 여러가지 추가 refactor 진행.
+trailer 불러오는 로딩속도 개선 미흠, trailers 애도 framer motion 추가했음 좋았을듯 함, 반응형 css 구현 못했다.
