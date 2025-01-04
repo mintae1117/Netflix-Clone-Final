@@ -2,6 +2,7 @@ import { useQuery } from "react-query";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { IGetVideo, getVideo } from "../api";
 import styled from "styled-components";
+import ReactPlayer from "react-player";
 
 const TrailerWrapper = styled.div`
     min-height: 90vh;
@@ -77,14 +78,14 @@ function Trailers () {
                 <GoBackBtn onClick={() => navigate(-1)}>GO BACK</GoBackBtn>
             </TrailerTitleDiv>
             <TrailerGrid>
-                {youtubeKey?.slice(0, 25).map((video) => (/*최대 25개 까지만 가져오기*/
-                    <iframe
+                {youtubeKey?.slice(0, 25).map((video) => (
+                    <ReactPlayer
                         key={video.key}
-                        src={`https://www.youtube.com/embed/${video.key}?rel=0&vq=hd1080&autoplay=0`}
-                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        title={video.name}
-                        style={{width: "100%"}}
+                        url={`https://www.youtube.com/watch?v=${video.key}`}
+                        controls
+                        width="100%"
+                        height="100%"
+                        style={{ maxWidth: "100%" }}
                     />
                 ))}
                 {youtubeKey?.length === 0 ? <h1 style={{fontSize: 30}}>No results found</h1> : null}
